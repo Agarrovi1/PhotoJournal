@@ -79,12 +79,12 @@
 		4DE519C72343E0C7005097C3 /* PhotoJournal */ = {
 			isa = PBXGroup;
 			children = (
-				4DE519C82343E0C7005097C3 /* AppDelegate.swift */,
-				4DE519CA2343E0C7005097C3 /* SceneDelegate.swift */,
-				4DE519CC2343E0C7005097C3 /* ViewController.swift */,
+				4DE519ED2343E159005097C3 /* Models */,
+				4DE519EC2343E14F005097C3 /* Views */,
+				4DE519EB2343E147005097C3 /* Controllers */,
+				4DE519EA2343E132005097C3 /* Supporting Files */,
 				4DE519CE2343E0C7005097C3 /* Main.storyboard */,
 				4DE519D12343E0C8005097C3 /* Assets.xcassets */,
-				4DE519D32343E0C8005097C3 /* LaunchScreen.storyboard */,
 				4DE519D62343E0C8005097C3 /* Info.plist */,
 			);
 			path = PhotoJournal;
@@ -97,6 +97,38 @@
 				4DE519E12343E0C9005097C3 /* Info.plist */,
 			);
 			path = PhotoJournalTests;
+			sourceTree = "<group>";
+		};
+		4DE519EA2343E132005097C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DE519C82343E0C7005097C3 /* AppDelegate.swift */,
+				4DE519CA2343E0C7005097C3 /* SceneDelegate.swift */,
+				4DE519D32343E0C8005097C3 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DE519EB2343E147005097C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DE519CC2343E0C7005097C3 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4DE519EC2343E14F005097C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4DE519ED2343E159005097C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
