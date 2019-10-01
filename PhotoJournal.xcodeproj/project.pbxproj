@@ -82,10 +82,10 @@
 				4DE519ED2343E159005097C3 /* Models */,
 				4DE519EC2343E14F005097C3 /* Views */,
 				4DE519EB2343E147005097C3 /* Controllers */,
-				4DE519EA2343E132005097C3 /* Supporting Files */,
 				4DE519CE2343E0C7005097C3 /* Main.storyboard */,
 				4DE519D12343E0C8005097C3 /* Assets.xcassets */,
 				4DE519D62343E0C8005097C3 /* Info.plist */,
+				4DE519EA2343E132005097C3 /* Supporting Files */,
 			);
 			path = PhotoJournal;
 			sourceTree = "<group>";
