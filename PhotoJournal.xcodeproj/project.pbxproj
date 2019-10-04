@@ -14,6 +14,8 @@
 		4DE519D22343E0C8005097C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE519D12343E0C8005097C3 /* Assets.xcassets */; };
 		4DE519D52343E0C8005097C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE519D32343E0C8005097C3 /* LaunchScreen.storyboard */; };
 		4DE519E02343E0C9005097C3 /* PhotoJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE519DF2343E0C9005097C3 /* PhotoJournalTests.swift */; };
+		4DE519EF2343F669005097C3 /* PhotoJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE519EE2343F669005097C3 /* PhotoJournalViewController.swift */; };
+		4DE519F12343F67B005097C3 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE519F02343F67B005097C3 /* AddPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		4DE519DB2343E0C9005097C3 /* PhotoJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE519DF2343E0C9005097C3 /* PhotoJournalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalTests.swift; sourceTree = "<group>"; };
 		4DE519E12343E0C9005097C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE519EE2343F669005097C3 /* PhotoJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalViewController.swift; sourceTree = "<group>"; };
+		4DE519F02343F67B005097C3 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				4DE519CC2343E0C7005097C3 /* ViewController.swift */,
+				4DE519EE2343F669005097C3 /* PhotoJournalViewController.swift */,
+				4DE519F02343F67B005097C3 /* AddPhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 			files = (
 				4DE519CD2343E0C7005097C3 /* ViewController.swift in Sources */,
 				4DE519C92343E0C7005097C3 /* AppDelegate.swift in Sources */,
+				4DE519F12343F67B005097C3 /* AddPhotoViewController.swift in Sources */,
+				4DE519EF2343F669005097C3 /* PhotoJournalViewController.swift in Sources */,
 				4DE519CB2343E0C7005097C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
