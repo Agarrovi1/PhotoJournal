@@ -9,5 +9,10 @@
 import UIKit
 
 class PhotoEntryCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var picImageView: UIImageView!
+    @IBOutlet weak var summaryLabel: UILabel!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBAction func pageControlPressed(_ sender: UIPageControl) {
+    }
 }

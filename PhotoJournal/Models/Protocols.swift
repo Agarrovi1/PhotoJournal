@@ -7,3 +7,6 @@
 //
 
 import Foundation
+protocol CollectionReload {
+    func reloadCollectionView()
+}
