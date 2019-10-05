@@ -7,8 +7,11 @@
 //
 
 import Foundation
-protocol CollectionReload {
-    func reloadCollectionView()
+protocol DefaultSettings {
+    var darkMode: Bool? {get}
+    var verticalScroll: Bool? {get}
+    func setupDarkModeDefaults()
+    func setupScrollDefaults()
 }
 protocol PhotoEntryCellDelegate {
     func showActionSheet(tag: Int)

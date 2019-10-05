@@ -26,6 +26,10 @@ class PhotoJournalViewController: UIViewController {
         present(addPhotoVC, animated: true, completion: nil)
     }
     @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        guard let SettingVC = storyboard.instantiateViewController(identifier: "SettingVC") as? SettingsTableViewController else {return}
+        SettingVC.modalPresentationStyle = .currentContext
+        present(SettingVC, animated: true, completion: nil)
     }
     
     //MARK: - Functions
@@ -52,6 +56,7 @@ class PhotoJournalViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         loadSavedPics()
+        setupDarkModeDefaults()
     }
     
 }
@@ -108,4 +113,22 @@ extension PhotoJournalViewController: PhotoEntryCellDelegate {
         self.present(actionSheet, animated: true, completion: nil)
     }
 }
+extension PhotoJournalViewController: DefaultSettings {
+    var darkMode: Bool? {
+        UserDefaultWrapper.manager.getDarkMode()
 
+    }
+    
+    var verticalScroll: Bool? {
+    UserDefaultWrapper.manager.getVerticalScroll()
+    }
+    
+    func setupDarkModeDefaults() {
+        guard let darkMode = darkMode else {return}
+        self.photoCollectionView.backgroundColor = darkMode ? .darkGray : .white
+    }
+    
+    func setupScrollDefaults() {
+        
+    }
+}

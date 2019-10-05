@@ -89,7 +89,8 @@ class AddPhotoViewController: UIViewController {
     private func setupImage() {
         switch mode {
         case .add:
-            picImageView.image = UIImage(named: "blankImage")
+//            picImageView.image = UIImage(named: "blankImage")
+           return
         case .edit:
             guard let currentPic = currentPic else {return}
             picImageView.image = UIImage(data: currentPic.imageData)
@@ -99,6 +100,7 @@ class AddPhotoViewController: UIViewController {
         super.viewDidLoad()
         setupTextView()
         setupImage()
+        setupDarkModeDefaults()
     }
 
 }
@@ -123,5 +125,24 @@ extension AddPhotoViewController: UITextViewDelegate {
             summaryTextView.text = "Enter description here..."
             summaryTextView.textColor = .lightGray
         }
+    }
+}
+extension AddPhotoViewController: DefaultSettings {
+    var darkMode: Bool? {
+        UserDefaultWrapper.manager.getDarkMode()
+
+    }
+    
+    var verticalScroll: Bool? {
+    UserDefaultWrapper.manager.getVerticalScroll()
+    }
+    
+    func setupDarkModeDefaults() {
+        guard let darkMode = darkMode else {return}
+        self.view.backgroundColor = darkMode ? .darkGray : .white
+    }
+    
+    func setupScrollDefaults() {
+        
     }
 }

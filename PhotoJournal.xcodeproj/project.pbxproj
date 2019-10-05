@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4D5EF28C23491315009FDA07 /* AddOrEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28B23491315009FDA07 /* AddOrEdit.swift */; };
+		4D5EF28E23491B83009FDA07 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28D23491B83009FDA07 /* UserDefaults.swift */; };
+		4D5EF29223492653009FDA07 /* DarkModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF29123492653009FDA07 /* DarkModeTableViewCell.swift */; };
+		4D5EF296234926A5009FDA07 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF295234926A5009FDA07 /* SettingsTableViewController.swift */; };
 		4D6AFFA72347C53F00B5D472 /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFA62347C53F00B5D472 /* PersistanceHelper.swift */; };
 		4D6AFFA92347C64A00B5D472 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFA82347C64A00B5D472 /* PhotoInfo.swift */; };
 		4D6AFFAB2347C94A00B5D472 /* PhotoInfoPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFAA2347C94A00B5D472 /* PhotoInfoPersistance.swift */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		4D5EF28B23491315009FDA07 /* AddOrEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEdit.swift; sourceTree = "<group>"; };
+		4D5EF28D23491B83009FDA07 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		4D5EF29123492653009FDA07 /* DarkModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeTableViewCell.swift; sourceTree = "<group>"; };
+		4D5EF295234926A5009FDA07 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4D6AFFA62347C53F00B5D472 /* PersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHelper.swift; sourceTree = "<group>"; };
 		4D6AFFA82347C64A00B5D472 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		4D6AFFAA2347C94A00B5D472 /* PhotoInfoPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoPersistance.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 				4DE519CC2343E0C7005097C3 /* ViewController.swift */,
 				4DE519EE2343F669005097C3 /* PhotoJournalViewController.swift */,
 				4DE519F02343F67B005097C3 /* AddPhotoViewController.swift */,
+				4D5EF295234926A5009FDA07 /* SettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				4D6AFFAC2347D1A000B5D472 /* PhotoEntryCollectionViewCell.swift */,
+				4D5EF29123492653009FDA07 /* DarkModeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				4D6AFFA82347C64A00B5D472 /* PhotoInfo.swift */,
 				4D6AFFAE2347EA9800B5D472 /* Protocols.swift */,
 				4D5EF28B23491315009FDA07 /* AddOrEdit.swift */,
+				4D5EF28D23491B83009FDA07 /* UserDefaults.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,14 +265,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5EF29223492653009FDA07 /* DarkModeTableViewCell.swift in Sources */,
 				4D6AFFA92347C64A00B5D472 /* PhotoInfo.swift in Sources */,
 				4DE519CD2343E0C7005097C3 /* ViewController.swift in Sources */,
 				4D6AFFAD2347D1A000B5D472 /* PhotoEntryCollectionViewCell.swift in Sources */,
 				4DE519C92343E0C7005097C3 /* AppDelegate.swift in Sources */,
 				4DE519F12343F67B005097C3 /* AddPhotoViewController.swift in Sources */,
+				4D5EF296234926A5009FDA07 /* SettingsTableViewController.swift in Sources */,
 				4D6AFFAF2347EA9800B5D472 /* Protocols.swift in Sources */,
 				4D6AFFAB2347C94A00B5D472 /* PhotoInfoPersistance.swift in Sources */,
 				4DE519EF2343F669005097C3 /* PhotoJournalViewController.swift in Sources */,
+				4D5EF28E23491B83009FDA07 /* UserDefaults.swift in Sources */,
 				4DE519CB2343E0C7005097C3 /* SceneDelegate.swift in Sources */,
 				4D6AFFA72347C53F00B5D472 /* PersistanceHelper.swift in Sources */,
 				4D5EF28C23491315009FDA07 /* AddOrEdit.swift in Sources */,
