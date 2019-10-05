@@ -80,7 +80,7 @@
                                                     <color key="pageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <connections>
-                                                        <action selector="pageControlPressed:" destination="Tc6-b4-fUX" eventType="valueChanged" id="8Bf-2v-OZ6"/>
+                                                        <action selector="pageControlPressed:" destination="Tc6-b4-fUX" eventType="touchUpInside" id="yfs-9a-yLh"/>
                                                     </connections>
                                                 </pageControl>
                                             </subviews>
@@ -103,6 +103,7 @@
                                         <size key="customSize" width="355" height="354"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="KQv-E3-1qR" id="Oiw-c6-Y0G"/>
+                                            <outlet property="pageControl" destination="H2u-d9-HNZ" id="6Ue-KP-QCL"/>
                                             <outlet property="picImageView" destination="7pa-UL-Yuh" id="RQP-IO-L3E"/>
                                             <outlet property="summaryLabel" destination="j09-JW-DRI" id="q5a-mW-Rsi"/>
                                         </connections>

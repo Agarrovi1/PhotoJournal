@@ -10,3 +10,6 @@ import Foundation
 protocol CollectionReload {
     func reloadCollectionView()
 }
+protocol PhotoEntryCellDelegate {
+    func showActionSheet(tag: Int)
+}

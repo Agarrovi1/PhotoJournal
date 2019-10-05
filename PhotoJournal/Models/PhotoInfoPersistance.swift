@@ -17,7 +17,12 @@ class PhotoInfoPersistance {
     func getPhotos() throws -> [PhotoInfo] {
         return try persistanceHelper.getObjects()
     }
-    
+    func delete(tag: Int) throws {
+        var photos = try getPhotos()
+        _ = photos.remove(at: tag)
+        try persistanceHelper.replace(arrOfElements: photos)
+        print("successfully deleted")
+    }
     
     
     private let persistanceHelper = PersistenceHelper<PhotoInfo>.init(fileName: "PhotoInfo.plist")

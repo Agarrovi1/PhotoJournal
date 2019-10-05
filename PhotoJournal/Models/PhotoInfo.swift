@@ -13,14 +13,11 @@ struct PhotoInfo: Codable {
     let imageData: Data
     var summary: String
     let date: Date
-    let id: Int
     
     init(imageData: Data,summary: String) {
-        id = PhotoInfo.count
         self.imageData = imageData
         date = Date()
         favorited = false
         self.summary = summary
-        PhotoInfo.count += 1
     }
 }

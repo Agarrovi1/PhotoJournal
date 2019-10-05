@@ -10,7 +10,7 @@ import UIKit
 
 class AddPhotoViewController: UIViewController {
     
-    var delegate: CollectionReload?
+    //var delegate: CollectionReload?
     
     @IBOutlet weak var summaryTextView: UITextView!
     @IBOutlet weak var picImageView: UIImageView!
@@ -27,9 +27,7 @@ class AddPhotoViewController: UIViewController {
                 try PhotoInfoPersistance.manager.save(newPhoto: photoInfo)
                 DispatchQueue.main.async {
                     
-                    self.dismiss(animated: true) {
-                        self.delegate?.reloadCollectionView()
-                    }
+                    self.dismiss(animated: true)
                 }
                 
             } catch {

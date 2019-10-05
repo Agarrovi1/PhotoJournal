@@ -32,6 +32,7 @@ class PhotoJournalViewController: UIViewController {
     private func setDelegates() {
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
+        
     }
     private func loadSavedPics() {
         DispatchQueue.main.async {
@@ -43,15 +44,7 @@ class PhotoJournalViewController: UIViewController {
             }
         }
     }
-//    private func makeActionSheet() {
-//        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//        let delete = UIAlertAction(title: "Delete", style: .destructive) { (action) in
-//            <#code#>
-//        }
-//        let share = UIAlertAction(title: "Share", style: .default, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
-//        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
-//        self.present(actionSheet, animated: true, completion: nil)
-//    }
+   
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -79,16 +72,40 @@ extension PhotoJournalViewController: UICollectionViewDelegate,UICollectionViewD
         }
         cell.summaryLabel.text = photo.summary
         cell.dateLabel.text = "\(photo.date)"
+        cell.pageControl.tag = indexPath.row
+        cell.delegate = self
         return cell
     }
-    
-    
 }
-extension PhotoJournalViewController: CollectionReload {
-    func reloadCollectionView() {
-        loadSavedPics()
-        photoCollectionView.reloadData()
+
+//extension PhotoJournalViewController: CollectionReload {
+//    func reloadCollectionView() {
+//        loadSavedPics()
+//        photoCollectionView.reloadData()
+//    }
+//    
+//    
+//}
+
+extension PhotoJournalViewController: PhotoEntryCellDelegate {
+    func showActionSheet(tag: Int) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let delete = UIAlertAction(title: "Delete", style: .destructive) { (action) in
+            do {
+                try PhotoInfoPersistance.manager.delete(tag: tag)
+                let index = IndexPath(item: tag, section: 0)
+            
+                self.photoCollectionView.deleteItems(at: [index])
+                self.loadSavedPics()
+            } catch {
+                print(error)
+            }
+        }
+        //               let share = UIAlertAction(title: "Share", style: .default, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        actionSheet.addAction(delete)
+        actionSheet.addAction(cancel)
+        self.present(actionSheet, animated: true, completion: nil)
     }
-    
-    
 }
+

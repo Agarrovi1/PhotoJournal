@@ -9,10 +9,15 @@
 import UIKit
 
 class PhotoEntryCollectionViewCell: UICollectionViewCell {
+    var delegate: PhotoEntryCellDelegate?
+    
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var picImageView: UIImageView!
     @IBOutlet weak var summaryLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBAction func pageControlPressed(_ sender: UIPageControl) {
+        self.delegate?.showActionSheet(tag: sender.tag)
     }
+    
 }
