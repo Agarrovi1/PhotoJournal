@@ -46,8 +46,3 @@ Build a PhotoJournal app that uses the user's camera or photo library to create 
 
 ![photoJournalRubric](./Images/photoJournalRubric.png)
 
-## Sample gif of completed Photo Journal 
-
-<p align="center">
-  <img src="./Images/photo-journal.gif" height="700" width="354" />
-<p>
