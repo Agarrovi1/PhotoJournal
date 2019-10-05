@@ -106,10 +106,15 @@ extension PhotoJournalViewController: PhotoEntryCellDelegate {
             addPhotoVC.modalPresentationStyle = .currentContext
             self.present(addPhotoVC, animated: true, completion: nil)
         }
-        //               let share = UIAlertAction(title: "Share", style: .default, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+        let share = UIAlertAction(title: "Share", style: .default) { _ in
+            guard let image = UIImage(data: self.photoEntries[tag].imageData) else {return}
+            let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: [])
+            self.present(activityVC,animated: true)
+        }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         actionSheet.addAction(delete)
         actionSheet.addAction(edit)
+        actionSheet.addAction(share)
         actionSheet.addAction(cancel)
         self.present(actionSheet, animated: true, completion: nil)
     }
