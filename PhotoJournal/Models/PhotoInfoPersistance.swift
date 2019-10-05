@@ -13,7 +13,6 @@ class PhotoInfoPersistance {
     func save(newPhoto: PhotoInfo) throws {
         try persistanceHelper.save(newElement: newPhoto)
     }
-    
     func getPhotos() throws -> [PhotoInfo] {
         return try persistanceHelper.getObjects()
     }
@@ -22,6 +21,11 @@ class PhotoInfoPersistance {
         _ = photos.remove(at: tag)
         try persistanceHelper.replace(arrOfElements: photos)
         print("successfully deleted")
+    }
+    func saveNewChanges(to changedPic: PhotoInfo, tag: Int) throws {
+        var photos = try getPhotos()
+        photos[tag] = changedPic
+        try persistanceHelper.replace(arrOfElements: photos)
     }
     
     

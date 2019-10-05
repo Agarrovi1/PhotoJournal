@@ -15,16 +15,15 @@ class PhotoJournalViewController: UIViewController {
             photoCollectionView.reloadData()
         }
     }
-
+    
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let addPhotoVC = storyboard.instantiateViewController(identifier: "AddPhotoVC") as? AddPhotoViewController else {return}
-        //addPhotoVC.delegate = self
+        addPhotoVC.mode = .add
         addPhotoVC.modalPresentationStyle = .currentContext
         present(addPhotoVC, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(addPhotoVC, animated: true)
     }
     @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
     }
@@ -44,7 +43,6 @@ class PhotoJournalViewController: UIViewController {
             }
         }
     }
-   
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -54,7 +52,7 @@ class PhotoJournalViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         loadSavedPics()
     }
-
+    
 }
 //MARK: - Extensions
 extension PhotoJournalViewController: UICollectionViewDelegate,UICollectionViewDataSource {
@@ -94,16 +92,26 @@ extension PhotoJournalViewController: PhotoEntryCellDelegate {
             do {
                 try PhotoInfoPersistance.manager.delete(tag: tag)
                 let index = IndexPath(item: tag, section: 0)
-            
+                
                 self.photoCollectionView.deleteItems(at: [index])
                 self.loadSavedPics()
             } catch {
                 print(error)
             }
         }
+        let edit = UIAlertAction(title: "Edit", style: .default) { _ in
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            guard let addPhotoVC = storyboard.instantiateViewController(identifier: "AddPhotoVC") as? AddPhotoViewController else {return}
+            addPhotoVC.mode = .edit
+            addPhotoVC.currentPic = self.photoEntries[tag]
+            addPhotoVC.currentPicTag = tag
+            addPhotoVC.modalPresentationStyle = .currentContext
+            self.present(addPhotoVC, animated: true, completion: nil)
+        }
         //               let share = UIAlertAction(title: "Share", style: .default, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         actionSheet.addAction(delete)
+        actionSheet.addAction(edit)
         actionSheet.addAction(cancel)
         self.present(actionSheet, animated: true, completion: nil)
     }

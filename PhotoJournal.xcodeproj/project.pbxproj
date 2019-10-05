@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D5EF28C23491315009FDA07 /* AddOrEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28B23491315009FDA07 /* AddOrEdit.swift */; };
 		4D6AFFA72347C53F00B5D472 /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFA62347C53F00B5D472 /* PersistanceHelper.swift */; };
 		4D6AFFA92347C64A00B5D472 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFA82347C64A00B5D472 /* PhotoInfo.swift */; };
 		4D6AFFAB2347C94A00B5D472 /* PhotoInfoPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFAA2347C94A00B5D472 /* PhotoInfoPersistance.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D5EF28B23491315009FDA07 /* AddOrEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEdit.swift; sourceTree = "<group>"; };
 		4D6AFFA62347C53F00B5D472 /* PersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHelper.swift; sourceTree = "<group>"; };
 		4D6AFFA82347C64A00B5D472 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		4D6AFFAA2347C94A00B5D472 /* PhotoInfoPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoPersistance.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				4D6AFFAA2347C94A00B5D472 /* PhotoInfoPersistance.swift */,
 				4D6AFFA82347C64A00B5D472 /* PhotoInfo.swift */,
 				4D6AFFAE2347EA9800B5D472 /* Protocols.swift */,
+				4D5EF28B23491315009FDA07 /* AddOrEdit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				4DE519EF2343F669005097C3 /* PhotoJournalViewController.swift in Sources */,
 				4DE519CB2343E0C7005097C3 /* SceneDelegate.swift in Sources */,
 				4D6AFFA72347C53F00B5D472 /* PersistanceHelper.swift in Sources */,
+				4D5EF28C23491315009FDA07 /* AddOrEdit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
