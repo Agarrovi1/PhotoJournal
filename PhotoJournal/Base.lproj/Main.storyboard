@@ -185,7 +185,7 @@
                                     <outlet property="darkSwitch" destination="uun-tp-5ia" id="4VB-6a-vPG"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scrollCell" rowHeight="77" id="jrG-Vm-7Yr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scrollCell" rowHeight="77" id="jrG-Vm-7Yr" customClass="ScrollTableViewCell" customModule="PhotoJournal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="147" width="414" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jrG-Vm-7Yr" id="178-hx-Pgr">
@@ -194,6 +194,9 @@
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhy-vm-sfY">
                                             <rect key="frame" x="296" y="23" width="49" height="31"/>
+                                            <connections>
+                                                <action selector="switchSwitched:" destination="jrG-Vm-7Yr" eventType="valueChanged" id="GbU-OF-9iu"/>
+                                            </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vertical Scroll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-Lg-Vyn">
                                             <rect key="frame" x="32" y="28" width="151" height="21"/>
@@ -212,6 +215,9 @@
                                         <constraint firstItem="bhy-vm-sfY" firstAttribute="top" secondItem="178-hx-Pgr" secondAttribute="top" constant="23" id="lW8-lg-XGp"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scrollSwitch" destination="bhy-vm-sfY" id="ZhV-9x-EEg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>

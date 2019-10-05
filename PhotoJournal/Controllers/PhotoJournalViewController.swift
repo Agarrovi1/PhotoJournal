@@ -57,6 +57,7 @@ class PhotoJournalViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         loadSavedPics()
         setupDarkModeDefaults()
+        setupScrollDefaults()
     }
     
 }
@@ -113,6 +114,8 @@ extension PhotoJournalViewController: PhotoEntryCellDelegate {
         self.present(actionSheet, animated: true, completion: nil)
     }
 }
+
+
 extension PhotoJournalViewController: DefaultSettings {
     var darkMode: Bool? {
         UserDefaultWrapper.manager.getDarkMode()
@@ -129,6 +132,9 @@ extension PhotoJournalViewController: DefaultSettings {
     }
     
     func setupScrollDefaults() {
-        
+        guard let scroll = verticalScroll else {return}
+        if let layout = photoCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+        layout.scrollDirection = scroll ? .vertical : .horizontal
+        }
     }
 }

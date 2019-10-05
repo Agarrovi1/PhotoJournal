@@ -35,7 +35,9 @@ class SettingsTableViewController: UITableViewController {
             setDefaultSwitchPosition(cell: cell)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "scrollCell", for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "scrollCell", for: indexPath) as? ScrollTableViewCell else {return UITableViewCell()}
+            cell.delegate = self
+            setScrollDefaultSwitchPosition(cell: cell)
             return cell
         }
     }
@@ -43,6 +45,11 @@ class SettingsTableViewController: UITableViewController {
     private func setDefaultSwitchPosition(cell: DarkModeTableViewCell) {
         if let darkMode = darkMode {
             cell.darkSwitch.isOn = darkMode
+        }
+    }
+    private func setScrollDefaultSwitchPosition(cell: ScrollTableViewCell) {
+        if let scroll = verticalScroll {
+            cell.scrollSwitch.isOn = scroll
         }
     }
 }

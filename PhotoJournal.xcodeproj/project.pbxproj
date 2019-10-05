@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4B072E2349371000FD8806 /* ScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B072D2349371000FD8806 /* ScrollTableViewCell.swift */; };
 		4D5EF28C23491315009FDA07 /* AddOrEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28B23491315009FDA07 /* AddOrEdit.swift */; };
 		4D5EF28E23491B83009FDA07 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28D23491B83009FDA07 /* UserDefaults.swift */; };
 		4D5EF29223492653009FDA07 /* DarkModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF29123492653009FDA07 /* DarkModeTableViewCell.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D4B072D2349371000FD8806 /* ScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTableViewCell.swift; sourceTree = "<group>"; };
 		4D5EF28B23491315009FDA07 /* AddOrEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEdit.swift; sourceTree = "<group>"; };
 		4D5EF28D23491B83009FDA07 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4D5EF29123492653009FDA07 /* DarkModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				4D6AFFAC2347D1A000B5D472 /* PhotoEntryCollectionViewCell.swift */,
 				4D5EF29123492653009FDA07 /* DarkModeTableViewCell.swift */,
+				4D4B072D2349371000FD8806 /* ScrollTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				4D5EF296234926A5009FDA07 /* SettingsTableViewController.swift in Sources */,
 				4D6AFFAF2347EA9800B5D472 /* Protocols.swift in Sources */,
 				4D6AFFAB2347C94A00B5D472 /* PhotoInfoPersistance.swift in Sources */,
+				4D4B072E2349371000FD8806 /* ScrollTableViewCell.swift in Sources */,
 				4DE519EF2343F669005097C3 /* PhotoJournalViewController.swift in Sources */,
 				4D5EF28E23491B83009FDA07 /* UserDefaults.swift in Sources */,
 				4DE519CB2343E0C7005097C3 /* SceneDelegate.swift in Sources */,
