@@ -10,13 +10,16 @@ import UIKit
 
 class AddPhotoViewController: UIViewController {
     
+    //MARK: - Properties
     var currentPic: PhotoInfo?
     var currentPicTag = 0
     var mode: AddOrEdit = .add
     
+    //MARK: - Outlets
     @IBOutlet weak var summaryTextView: UITextView!
     @IBOutlet weak var picImageView: UIImageView!
     
+    //MARK: - Actions
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }

@@ -9,15 +9,15 @@
 import UIKit
 
 class PhotoJournalViewController: UIViewController {
-    
+    //MARK: - Properties
     var photoEntries = [PhotoInfo]() {
         didSet {
             photoCollectionView.reloadData()
         }
     }
-    
+    //MARK: - Outlets
     @IBOutlet weak var photoCollectionView: UICollectionView!
-    
+    //MARK: - Actions
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         guard let addPhotoVC = storyboard.instantiateViewController(identifier: "AddPhotoVC") as? AddPhotoViewController else {return}
@@ -28,6 +28,7 @@ class PhotoJournalViewController: UIViewController {
     @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
     }
     
+    //MARK: - Functions
     private func setDelegates() {
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
@@ -75,15 +76,6 @@ extension PhotoJournalViewController: UICollectionViewDelegate,UICollectionViewD
         return cell
     }
 }
-
-//extension PhotoJournalViewController: CollectionReload {
-//    func reloadCollectionView() {
-//        loadSavedPics()
-//        photoCollectionView.reloadData()
-//    }
-//    
-//    
-//}
 
 extension PhotoJournalViewController: PhotoEntryCellDelegate {
     func showActionSheet(tag: Int) {
