@@ -42,7 +42,3 @@ Build a PhotoJournal app that uses the user's camera or photo library to create 
 - Include an option for setting the background color.
 - All settings should be persisted to UserDefaults.
 
-## Rubric
-
-![photoJournalRubric](./Images/photoJournalRubric.png)
-
