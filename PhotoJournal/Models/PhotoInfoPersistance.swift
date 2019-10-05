@@ -7,3 +7,20 @@
 //
 
 import Foundation
+class PhotoInfoPersistance {
+    static let manager = PhotoInfoPersistance()
+    
+    func save(newPhoto: PhotoInfo) throws {
+        try persistanceHelper.save(newElement: newPhoto)
+    }
+    
+    func getPhotos() throws -> [PhotoInfo] {
+        return try persistanceHelper.getObjects()
+    }
+    
+    
+    
+    private let persistanceHelper = PersistenceHelper<PhotoInfo>.init(fileName: "PhotoInfo.plist")
+    
+    private init() {}
+}
