@@ -10,7 +10,7 @@ import Foundation
 struct PhotoInfo: Codable {
     static var count = 0
     var favorited: Bool
-    let imageData: Data
+    var imageData: Data
     var summary: String
     let date: Date
     

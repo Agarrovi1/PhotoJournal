@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D4B072E2349371000FD8806 /* ScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B072D2349371000FD8806 /* ScrollTableViewCell.swift */; };
+		4D4B072F234A629E00FD8806 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFA82347C64A00B5D472 /* PhotoInfo.swift */; };
+		4D4B0730234A62A100FD8806 /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFA62347C53F00B5D472 /* PersistanceHelper.swift */; };
+		4D4B0731234A62A300FD8806 /* PhotoInfoPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AFFAA2347C94A00B5D472 /* PhotoInfoPersistance.swift */; };
+		4D4B0732234A62AC00FD8806 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28D23491B83009FDA07 /* UserDefaults.swift */; };
 		4D5EF28C23491315009FDA07 /* AddOrEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28B23491315009FDA07 /* AddOrEdit.swift */; };
 		4D5EF28E23491B83009FDA07 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF28D23491B83009FDA07 /* UserDefaults.swift */; };
 		4D5EF29223492653009FDA07 /* DarkModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EF29123492653009FDA07 /* DarkModeTableViewCell.swift */; };
@@ -290,7 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4B0731234A62A300FD8806 /* PhotoInfoPersistance.swift in Sources */,
+				4D4B0732234A62AC00FD8806 /* UserDefaults.swift in Sources */,
+				4D4B072F234A629E00FD8806 /* PhotoInfo.swift in Sources */,
 				4DE519E02343E0C9005097C3 /* PhotoJournalTests.swift in Sources */,
+				4D4B0730234A62A100FD8806 /* PersistanceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
