@@ -30,5 +30,29 @@ class PhotoJournalTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    func testPhotoInfoCanChange() {
+        var sample = PhotoInfo(imageData: Data(), summary: "")
+        if let newData = UIImage(named: "blankImage")?.pngData() {
+            sample.imageData = newData
+            XCTAssertTrue(sample.imageData != Data())
+        }
+        sample.summary = "new summary"
+        XCTAssertTrue(sample.summary != "")
+    }
+    func testPersistanceHelper() {
+        do {
+            let array = try PhotoInfoPersistance.manager.getPhotos()
+            XCTAssertTrue(array.count != 0)
+        } catch {
+            XCTAssertTrue(false, "Error: \(error)")
+        }
+    }
+    func testUserDefaults() {
+        if let aDefaultValue = UserDefaultWrapper.manager.getDarkMode() {
+            XCTAssertTrue(aDefaultValue == true || aDefaultValue == false)
+        } else {
+            XCTAssertNil(nil, "no default Value")
+        }
+    }
 
 }
